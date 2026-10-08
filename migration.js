@@ -17,9 +17,10 @@ async function criar_estrutura() {
           ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
         `)
         console.log("Estrutura de dados e tabela 'Clientes' criada com sucesso!!")
+        process.exit(0);
     } catch (error) {
         console.log(error)
     }
-    process.exit()
+    process.exit(1);
 }
 criar_estrutura()
